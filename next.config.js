@@ -6,7 +6,7 @@ const nextConfig = {
   trailingSlash: true,
   swcMinify: true,
   basePath: "",
-  assetPrefix : isProd ? 'https://nextjs.spruko.com/spruha-ts/preview/' : undefined,
+  assetPrefix : "",
   images: {
     loader: 'imgix',
     path: '/',
