@@ -241,6 +241,12 @@ Width
     line-height: 2rem;
   }
 }
+
+
+.sidebar-head{
+  border-block-end: 1px solid #f3f3f3 !important;
+  border-inline-end: 1px solid #f3f3f3 !important;
+}
 /* Respoonsive Logo Styles */
 /* Dark Mode */
 [data-theme-mode="dark"]

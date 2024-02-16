@@ -516,7 +516,7 @@ const SideBar = ({
         onMouseOver={() => Onhover()}
         onMouseOut={() => Outhover()}
       >
-        <div className="main-sidebar-header">
+        <div className="main-sidebar-header sidebar-head">
           <Link
             className="header-logo"
             href={`/components/dashboard/dashboard`}
