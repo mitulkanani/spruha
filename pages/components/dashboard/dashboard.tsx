@@ -347,7 +347,7 @@ const Dashboard = () => {
                 <Card.Body>
                   {progressData.map((progressItem,index)=>{
                     return (
-                      <Row className=" mt-3" key={index}>
+                      <Row className="topInquiries" key={index}>
                         <div className="col-5">
                           <span>{progressItem.category}</span>
                         </div>
@@ -360,7 +360,13 @@ const Dashboard = () => {
                         <div className="col-4">
                           <div className="d-flex">
                             <span className="fs-13">
-                              <i className={`${progressItem.trend.direction === "up" ? "text-success:":"text-danger"} fe fe-arrow-${progressItem.trend.direction}`}></i>
+                              <i
+                                className={`${
+                                  progressItem.trend.direction === "up"
+                                    ? "text-success:"
+                                    : "text-danger"
+                                } fe fe-arrow-${progressItem.trend.direction}`}
+                              ></i>
                               <b>{progressItem.trend.percentage}</b>
                             </span>
                           </div>

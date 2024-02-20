@@ -247,6 +247,10 @@ Width
   border-block-end: 1px solid #f3f3f3 !important;
   border-inline-end: 1px solid #f3f3f3 !important;
 }
+
+.topInquiries{
+  margin-top:17px !important;
+}
 /* Respoonsive Logo Styles */
 /* Dark Mode */
 [data-theme-mode="dark"]
@@ -583,7 +587,9 @@ Width
 }
 [data-page-style="classic"][data-nav-layout="horizontal"] .app-sidebar {
   border-block-end: 1px solid var(--menu-border-color);
-}
+}DASHBOARD
+Dashboard
+
 
 [data-page-style="modern"] {
   --light-rgb: 255, 255, 255;
