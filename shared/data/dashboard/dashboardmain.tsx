@@ -33,11 +33,11 @@ export const linechart : any= {
   export const linechartoptions: any = {
     series: [
       {
-        name: "Total Budget",
+        name: "Completed Controls",
         data: [20, 38, 38, 72, 55, 63, 43, 76, 55, 80, 40, 80],
       },
       {
-        name: "Amount Used",
+        name: "Pending Controls",
         data: [85, 65, 75, 38, 85, 35, 62, 40, 40, 64, 50, 89],
       },
     ],

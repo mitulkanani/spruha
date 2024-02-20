@@ -3,42 +3,42 @@ const recentTransactionsData = [
     avatarSrc: "../../../assets/images/faces/5.jpg",
     name: "Flicker",
     description: "App improvement",
-    amount: "$45.234",
+    boarding: "Onboarded",
     date: "12 Jan 2020",
   },
   {
     avatarSrc: "../../../assets/images/faces/6.jpg",
     name: "Intoxica",
     description: "Milestone",
-    amount: "$23.452",
+    boarding: "Onboarded",
     date: "23 Jan 2020",
   },
   {
     avatarSrc: "../../../assets/images/faces/7.jpg",
     name: "Digiwatt",
     description: "Sales executive",
-    amount: "$78.001",
+    boarding: "Offboarded",
     date: "4 Apr 2020",
   },
   {
     avatarSrc: "../../../assets/images/faces/8.jpg",
     name: "Flicker",
     description: "Milestone2",
-    amount: "$37.285",
+    boarding: "Offboarded",
     date: "4 Apr 2020",
   },
   {
     avatarSrc: "../../../assets/images/faces/4.jpg",
     name: "Flicker",
     description: "App improvement",
-    amount: "$25.341",
+    boarding: "Onboarded",
     date: "4 Apr 2020",
   },
 ];
 
 const progressData = [
   {
-    category: "Brand identity",
+    category: "CC1",
     progress: 90,
     trend: {
       direction: "up",
@@ -46,7 +46,7 @@ const progressData = [
     },
   },
   {
-    category: "UI & UX design",
+    category: "CC2",
     progress: 80,
     trend: {
       direction: "down",
@@ -54,7 +54,7 @@ const progressData = [
     },
   },
   {
-    category: "Product design",
+    category: "CC3",
     progress: 50,
     trend: {
       direction: "up",

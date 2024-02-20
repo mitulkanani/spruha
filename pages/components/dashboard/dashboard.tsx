@@ -27,7 +27,7 @@ const TodayTask = dynamic(
 const Dashboard = () => {
   const TASKS = [
     {
-      Task: "Evaluating the design",
+      Task: "Log management utilized",
       TeamMember1: "../../../assets/images/faces/1.jpg",
       TeamMember2: "../../../assets/images/faces/2.jpg",
       TeamMember3: "../../../assets/images/faces/3.jpg",
@@ -39,7 +39,7 @@ const Dashboard = () => {
       Statustext: "primary",
     },
     {
-      Task: "Generate ideas for design",
+      Task: "Remote access MFA enforced",
       TeamMember1: "../../../assets/images/faces/2.jpg",
       TeamMember2: "../../../assets/images/faces/10.jpg",
       TeamMember3: "../../../assets/images/faces/11.jpg",
@@ -51,7 +51,7 @@ const Dashboard = () => {
       Statustext: "warning",
     },
     {
-      Task: "Define the problem",
+      Task: "Data transmission encrypted",
       TeamMember1: "../../../assets/images/faces/3.jpg",
       TeamMember2: "../../../assets/images/faces/6.jpg",
       TeamMember3: "../../../assets/images/faces/11.jpg",
@@ -61,18 +61,6 @@ const Dashboard = () => {
       Profittext: "warning",
       Status: "Completed",
       Statustext: "primary",
-    },
-    {
-      Task: "Empathize with users",
-      TeamMember1: "../../../assets/images/faces/4.jpg",
-      TeamMember2: "../../../assets/images/faces/5.jpg",
-      TeamMember3: "../../../assets/images/faces/6.jpg",
-      TeamMember4: "../../../assets/images/faces/3.jpg",
-      OpenTask: "37",
-      TaskProfit: "high",
-      Profittext: "primary",
-      Status: "Rejected",
-      Statustext: "danger",
     },
   ];
   return (
@@ -97,13 +85,12 @@ const Dashboard = () => {
                       {/* <div className="offset-xl-3 offset-sm-6 col-xl-8 col-sm-6 col-12 img-bg "> */}
                       <h4 className="d-flex  mb-3">
                         <span className="fw-bold text-fixed-white">
-                          Sonia Taylor!
+                          Onboarding…
                         </span>
                       </h4>
                       <p className="tx-white-7 mb-1">
-                        You have two projects to finish, you had completed{" "}
-                        <b className="text-warning">57%</b> from your monthly
-                        level, Keep going to your level
+                        Your SOC 2 setup is in progress. You have completed{" "}
+                        <b className="text-warning">65%</b> of the onboarding.
                       </p>
                     </div>
                     <img
@@ -155,7 +142,7 @@ const Dashboard = () => {
                     </div>
                     <div className="card-item-title mb-2">
                       <label className="main-content-label fs-13 fw-bold mb-1">
-                        Total Revenue
+                        Completed Controls
                       </label>
                       <span className="d-block fs-12 mb-0 text-muted">
                         Previous month vs this months
@@ -163,7 +150,7 @@ const Dashboard = () => {
                     </div>
                     <div className="card-item-body">
                       <div className="card-item-stat">
-                        <h4 className="fw-bold">$5,900.00</h4>
+                        <h4 className="fw-bold">35/120</h4>
                         <small>
                           <b className="text-success">55%</b> higher
                         </small>
@@ -197,14 +184,14 @@ const Dashboard = () => {
                         New Employees
                       </label>
                       <span className="d-block fs-12 mb-0 text-muted">
-                        Employees joined this month
+                        Employees onboarded this month
                       </span>
                     </div>
                     <div className="card-item-body">
                       <div className="card-item-stat">
                         <h4 className="fw-bold">15</h4>
                         <small>
-                          <b className="text-success">5%</b> Increased
+                          <b className="text-success">5%</b> Increase
                         </small>
                       </div>
                     </div>
@@ -234,10 +221,10 @@ const Dashboard = () => {
                     </div>
                     <div className="card-item-title  mb-2">
                       <label className="main-content-label fs-13 fw-bold mb-1">
-                        Total Expenses
+                        Compliance Budget
                       </label>
                       <span className="d-block fs-12 mb-0 text-muted">
-                        Previous month vs this months
+                        Estimated Remediation Cost
                       </span>
                     </div>
                     <div className="card-item-body">
@@ -289,16 +276,16 @@ const Dashboard = () => {
                   <div>
                     <div className="d-md-flex">
                       <label className="main-content-label my-auto pt-2">
-                        Today tasks
+                        Assigned Tasks
                       </label>
                       <div className="ms-auto mt-3 d-flex">
                         <div className="me-3 d-flex text-muted fs-13">
                           <span className="legend bg-primary rounded-circle"></span>
-                          Project
+                          In-progress
                         </div>
                         <div className="me-3 d-flex text-muted fs-13">
                           <span className="legend bg-light rounded-circle"></span>
-                          Inprogress
+                          Completed
                         </div>
                       </div>
                     </div>
@@ -310,10 +297,12 @@ const Dashboard = () => {
                 <Card.Body className="">
                   <Row>
                     <Col sm={6} className="my-auto">
-                      <h6 className="mb-3 fw-normal">Project-Budget</h6>
+                      <h6 className="mb-3 fw-normal">
+                        Compliance tasks assigned to you
+                      </h6>
                       <div className="text-start">
                         <h3 className="fw-bold me-3 mb-2 text-primary">
-                          $5,240
+                          12 Tasks
                         </h3>
                         <p className="fs-13 my-auto text-muted">
                           May 28 - June 01 (2018)
@@ -336,16 +325,16 @@ const Dashboard = () => {
                   <div>
                     <div className="d-flex">
                       <label className="main-content-label my-auto pt-2">
-                        Top Inquiries
+                        Top Control Criteria
                       </label>
                     </div>
                     <span className="d-block fs-12 mt-2 mb-0 text-muted">
-                      project work involves a group of students investigating .
+                      Controls with the most tasks completed.
                     </span>
                   </div>
                 </Card.Header>
                 <Card.Body>
-                  {progressData.map((progressItem,index)=>{
+                  {progressData.map((progressItem, index) => {
                     return (
                       <Row className="topInquiries" key={index}>
                         <div className="col-5">
@@ -564,7 +553,7 @@ const Dashboard = () => {
         <div className="col-sm-12 col-lg-12 col-xl-4 banner-img">
           <div className="card custom-card card-dashboard-calendar">
             <label className="main-content-label mb-2 pt-1">
-              Recent transcations
+              Recent Employees
             </label>
             <span className="d-block fs-12 mb-2 text-muted">
               Projects where development work is on completion
@@ -596,8 +585,14 @@ const Dashboard = () => {
                       <td className="text-end">
                         <div className="d-inline-block">
                           <h6 className="mb-2 fs-15 fw-semibold">
-                            {item.amount}
-                            <i className="fas fa-level-up-alt ms-2 text-success m-l-10"></i>
+                            {item.boarding}
+                            <i
+                              className={`fas ${
+                                item.boarding === "Onboarded"
+                                  ? "fa-level-up-alt text-success "
+                                  : "fa-level-down-alt text-danger "
+                              }ms-2 m-l-10`}
+                            ></i>
                           </h6>
                           <p className="mb-0 fs-11 text-muted">{item.date}</p>
                         </div>
@@ -614,17 +609,17 @@ const Dashboard = () => {
                 <div className="col-6">
                   <div className="card-item-title">
                     <label className="main-content-label fs-13 fw-bold mb-2">
-                      Project Launch
+                      Compliance Readiness
                     </label>
                     <span className="d-block fs-12 mb-0 text-muted">
-                      the project is going to launch
+                      Days remaining to Audit
                     </span>
                   </div>
                   <p className="mb-0 fs-24 mt-2">
-                    <b className="text-primary">145 days</b>
+                    <b className="text-primary">45 days</b>
                   </p>
                   <a href="#!" className="text-muted">
-                    12 Monday, Oct 2020{" "}
+                    15th April, 2024{" "}
                   </a>
                 </div>
                 <div className="col-6">
@@ -641,7 +636,7 @@ const Dashboard = () => {
             <Card.Header className="border-bottom-0 pb-0 d-flex ps-3 ms-1">
               <div>
                 <label className="main-content-label mb-2 pt-2">
-                  On going projects
+                  On-going Compliance
                 </label>
                 <span className="d-block fs-12 mb-2 text-muted">
                   Projects where development work is on completion
@@ -680,7 +675,7 @@ const Dashboard = () => {
                         src={"../../../assets/images/faces/4.jpg"}
                       />
                     </div>
-                    <div className="ms-3">Design team</div>
+                    <div className="ms-3">SOC 2</div>
                   </div>
                   <div className="ms-auto float-end">
                     <Dropdown className="GOIONGPROJECTS">
@@ -759,7 +754,7 @@ const Dashboard = () => {
                         src={"../../../assets/images/faces/8.jpg"}
                       />
                     </div>
-                    <div className="ms-3">Design team</div>
+                    <div className="ms-3">ISO 27001</div>
                   </div>
                   <div className="ms-auto float-end">
                     <Dropdown className="Designteam">
@@ -806,7 +801,7 @@ const Dashboard = () => {
             <div className="card-body">
               <div className="d-flex">
                 <label className="main-content-label my-auto">
-                  Website Design
+                  Control Criteria
                 </label>
                 <div className="ms-auto  d-flex">
                   <div className="me-3 d-flex text-muted fs-13">Running</div>
@@ -830,12 +825,12 @@ const Dashboard = () => {
               <div className="row">
                 <div className="col">
                   <div className="mt-4">
-                    <div className="d-flex mb-2">
+                    {/* <div className="d-flex mb-2">
                       <h5 className="fs-15 my-auto text-muted fw-normal">
                         Client :
                       </h5>
                       <h5 className="fs-15 my-auto ms-3">John Deo</h5>
-                    </div>
+                    </div> */}
                     <div className="d-flex mb-0">
                       <h5 className="fs-13 my-auto text-muted fw-normal">
                         Deadline :
