@@ -78,13 +78,13 @@ const Dashboard = () => {
           {/* <!--Row--> */}
           <div className="row row-sm banner-img">
             <div className="col-sm-12 col-lg-12 col-xl-12">
-              <div className="card bg-primary custom-card card-box">
+              <div className="card bg-primary custom-card card-box onboardingContainer">
                 <div className="card-body p-4">
                   <div className="row align-items-center">
-                    <div className="offset-xl-3 offset-sm-6 col-xl-8 col-sm-6 col-12">
+                    <div className="offset-xl-3 offset-sm-6 col-xl-8 col-sm-6 col-12 onboardingText">
                       {/* <div className="offset-xl-3 offset-sm-6 col-xl-8 col-sm-6 col-12 img-bg "> */}
                       <h4 className="d-flex  mb-3">
-                        <span className="fw-bold text-fixed-white">
+                        <span className="fw-bold text-fixed-white ">
                           Onboarding…
                         </span>
                       </h4>
@@ -96,6 +96,7 @@ const Dashboard = () => {
                     <img
                       src={"../../../assets/images/pngs/29.png"}
                       alt="user-img"
+                      className="onboardingImg"
                     />
                   </div>
                 </div>

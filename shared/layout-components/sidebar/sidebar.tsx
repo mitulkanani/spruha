@@ -521,11 +521,13 @@ const SideBar = ({
             className="header-logo"
             href={`/components/dashboard/dashboard`}
           >
-            <img
-              src={`/assets/images/brand-logos/desktop-logo.png`}
+            {/* <img
+              src={`/assets/images/brand-logos/spruhalogoNew.png`}
               className=""
               alt="logo"
-            />
+            /> */}
+            <div style={{ color: "black",fontSize:'40px',fontWeight:'800',lineHeight:'36px' }}>PickT</div>
+
             {/* <img
               src={`${
                 process.env.NODE_ENV === "production" ? basePath : ""

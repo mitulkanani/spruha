@@ -251,6 +251,15 @@ Width
 .topInquiries{
   margin-top:17px !important;
 }
+.onboardingImg{
+  z-index:5 !important;
+}
+.onboardingContainer{
+  z-index:-1 !important
+}
+.onboardingText{
+  z-index:10 !important
+}
 /* Respoonsive Logo Styles */
 /* Dark Mode */
 [data-theme-mode="dark"]
