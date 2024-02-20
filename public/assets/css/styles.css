@@ -261,7 +261,7 @@ Width
   z-index:10 !important
 }
 .logoPickt{
-  height:50px !important
+  height:64px !important
 }
 /* Respoonsive Logo Styles */
 /* Dark Mode */
@@ -37380,7 +37380,6 @@ a.tag-addon:hover {
   align-items: center;
   justify-content: center;
   /* padding: 0.813rem 1.25rem; */
-  padding: 6px;
   border-inline-end: 1px solid var(--menu-border-color);
   border-block-end: 1px solid var(--menu-border-color);
   transition: all 0.05s ease;

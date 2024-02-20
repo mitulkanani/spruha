@@ -676,7 +676,6 @@ const Dashboard = () => {
                         src={"../../../assets/images/faces/4.jpg"}
                       />
                     </div>
-                    <div className="ms-3">SOC 2</div>
                   </div>
                   <div className="ms-auto float-end">
                     <Dropdown className="GOIONGPROJECTS">
@@ -719,7 +718,7 @@ const Dashboard = () => {
                       <small className="fs-10 text-primary fw-semibold">
                         25 August 2020
                       </small>
-                      <h6 className=" mt-2">Mobile app design</h6>
+                      <h6 className=" mt-2">SOC 2</h6>
                     </div>
                   </div>
                 </div>
@@ -755,7 +754,6 @@ const Dashboard = () => {
                         src={"../../../assets/images/faces/8.jpg"}
                       />
                     </div>
-                    <div className="ms-3">ISO 27001</div>
                   </div>
                   <div className="ms-auto float-end">
                     <Dropdown className="Designteam">
@@ -791,7 +789,7 @@ const Dashboard = () => {
                       <small className="fs-10 text-primary fw-semibold">
                         12 JUNE 2020
                       </small>
-                      <h6 className=" mt-2">Website Redesign</h6>
+                      <h6 className=" mt-2">ISO 27001</h6>
                     </div>
                   </div>
                 </div>
