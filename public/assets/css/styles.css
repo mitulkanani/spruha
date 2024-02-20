@@ -260,6 +260,9 @@ Width
 .onboardingText{
   z-index:10 !important
 }
+.logoPickt{
+  height:50px !important
+}
 /* Respoonsive Logo Styles */
 /* Dark Mode */
 [data-theme-mode="dark"]
@@ -37376,7 +37379,8 @@ a.tag-addon:hover {
   z-index: 9;
   align-items: center;
   justify-content: center;
-  padding: 0.813rem 1.25rem;
+  /* padding: 0.813rem 1.25rem; */
+  padding: 6px;
   border-inline-end: 1px solid var(--menu-border-color);
   border-block-end: 1px solid var(--menu-border-color);
   transition: all 0.05s ease;

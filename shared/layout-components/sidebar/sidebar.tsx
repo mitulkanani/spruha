@@ -517,16 +517,13 @@ const SideBar = ({
         onMouseOut={() => Outhover()}
       >
         <div className="main-sidebar-header sidebar-head">
-          <Link
-            className="header-logo"
-            href={`/components/dashboard/dashboard`}
-          >
-            {/* <img
-              src={`/assets/images/brand-logos/spruhalogoNew.png`}
-              className=""
+          <Link className="" href={`/components/dashboard/dashboard`}>
+            <img
+              src={`/assets/images/brand-logos/pickTLogo.png`}
+              className="logoPickt"
               alt="logo"
-            /> */}
-            <div style={{ color: "black",fontSize:'40px',fontWeight:'800',lineHeight:'36px' }}>PickT</div>
+            />
+            {/* <div style={{ color: "black",fontSize:'40px',fontWeight:'800',lineHeight:'36px' }}>PickT</div> */}
 
             {/* <img
               src={`${
