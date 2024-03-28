@@ -384,12 +384,12 @@ export const DataTables = () => {
     data,
   };
   useEffect(() => {
-    const element = document.querySelector('[role="heading"]');
+    const element = document.querySelector(' .evaFvq ');
 
     // Check if the element exists
     if (element) {
       // Add CSS to hide the element
-      (element as HTMLElement).style.display = "none !important";
+      (element as HTMLElement).style.display = "none ";
     } else {
       console.error("Element not found.");
     }

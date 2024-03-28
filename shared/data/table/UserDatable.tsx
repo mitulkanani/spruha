@@ -341,7 +341,7 @@ export const UserDatable = () => {
     data,
   };
   useEffect(() => {
-    const element = document.querySelector(".sc-fHejqy.evaFvq.rdt_TableHeader");
+    const element = document.querySelector(".evaFvq");
 
     // Check if the element exists
     if (element) {
