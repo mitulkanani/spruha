@@ -21,7 +21,7 @@ export interface NestedMenuItem extends MenuItem {
 
 export const MENUITEMS: (MenuItem | NestedMenuItem)[] = [
   {
-    menutitle: "DASHBOARD",
+    // menutitle: "DASHBOARD",
     Items: [
       {
         path: "/components/dashboard/dashboard",
@@ -38,6 +38,22 @@ export const MENUITEMS: (MenuItem | NestedMenuItem)[] = [
         active: false,
         selected: false,
         title: "Controls",
+      },
+      {
+        path: "/components/document/Document",
+        icon: "ti-file",
+        type: "link",
+        active: false,
+        selected: false,
+        title: "All Document",
+      },
+      {
+        path: "/components/user/User",
+        icon: "ti-user",
+        type: "link",
+        active: false,
+        selected: false,
+        title: "All  User",
       },
       // {
       //   title: "Crypto Currencies",

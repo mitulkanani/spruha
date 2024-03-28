@@ -14817,10 +14817,7 @@ fieldset:disabled .btn {
 
 .bg-primary {
   --bs-bg-opacity: 1;
-  background-color: rgba(
-    var(--bs-primary-rgb),
-    var(--bs-bg-opacity)
-  ) !important;
+  background-color: #2B3242 !important;
 }
 
 .bg-secondary {
@@ -28704,7 +28701,7 @@ button {
   z-index: 1;
 }
 .task-list li {
-  margin-block-end: 28px;
+  margin-block-end: 23px;
   padding-inline-start: 55px;
   position: relative;
 }
@@ -38249,7 +38246,7 @@ a.tag-addon:hover {
   border-radius: 50%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   color: #fff;
-  background-color: #6390ca;
+  background-color: #2B3242;
 }
 [data-menu-styles="dark"][data-nav-layout="vertical"]
   .app-sidebar

@@ -19,6 +19,25 @@
 @import 'simplebar-react/dist/simplebar.min.css';
 
 
+.cursour{
+    cursor: pointer !important;;
+}
+p.dot::after {
+    content: ' ';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: gray;
+    border-radius: 20px;
+    right: -15px;
+    top: 6px;
+}
+.details{
+    width: 125px !important;
+}
+.decoration{
+    text-decoration: underline !important;
+}
 .accordian-title .accordion-button{
     background-color: #e2e0f3; 
 }

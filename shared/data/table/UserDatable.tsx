@@ -8,7 +8,7 @@ const DataTableExtensions: any = dynamic(
 
 import differenceBy from "lodash/differenceBy";
 // import { tableDataItems } from ""
-import { Button, Card, Offcanvas, ProgressBar } from "react-bootstrap";
+import { Button, Card, Col, Offcanvas, ProgressBar, Row } from "react-bootstrap";
 import "react-data-table-component-extensions/dist/index.css";
 // import google from '../../../public/assets/images/svgs/crypto-currencies/google.svg';
 import dynamic from "next/dynamic";
@@ -22,221 +22,197 @@ interface TableDataItem {
   owner: string;
   email: string;
   sharewith: string;
-  linktype: string;
-  modified: string;
-  age: string;
-  fileimg: any;
+  owned: string;
+  total: string;
+  sharing: string;
 }
 
 export const tableDataItems: TableDataItem[] = [
   {
     id: "1",
-    fileimg: "../../../assets/images/svgs/crypto-currencies/file.svg",
     imglink: "../../../assets/images/svgs/bag.png",
     name: "Sales agremments",
     app: "../../../assets/images/svgs/crypto-currencies/gd.svg",
     img: "../../../assets/images/faces/1.jpg",
     owner: "Alex spencer",
-    email: "i.bond@datatables.net",
-    sharewith: "Internal (15)",
-    linktype: "Company",
-    modified: "1 minute ago",
-
-    age: "2 days ago",
+    email: "s.bond@datatables.net",
+    sharewith: "Internal ",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "2",
-    fileimg: "../../../assets/images/svgs/xl.png",
     imglink: "../../../assets/images/svgs/crypto-currencies/lock.svg",
     name: "customer discovery notes",
     app: "../../../assets/images/svgs/crypto-currencies/microsoft.svg",
     img: "../../../assets/images/faces/2.jpg",
     owner: "Jane smith",
-    email: "a.bond@datatables.net",
-    sharewith: "Internal (15), Personal (3)",
-    linktype: "Restricted",
-    modified: "2 minute ago",
-
-    age: "3 days ago",
+    email: "s.bond@datatables.net",
+    sharewith: "Outside ",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "3",
-    fileimg: "../../../assets/images/svgs/word.png",
     imglink: "../../../assets/images/svgs/glob.png",
     name: "Blog post outline",
     app: "../../../assets/images/svgs/crypto-currencies/gd.svg",
     img: "../../../assets/images/faces/3.jpg",
     owner: "Bruce williams",
-    email: "s.bond@datatables.net",
-    sharewith: "Internal (15)",
-    linktype: "Public",
-    modified: "3 minute ago",
-
-    age: "9year ago",
+    email: "a.bond@datatables.net",
+    sharewith: "IPersonal",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "4",
-    fileimg: "../../../assets/images/svgs/pdf.png",
     imglink: "../../../assets/images/svgs/glob.png",
     name: "Out bond tracker",
     app: "../../../assets/images/svgs/crypto-currencies/microsoft.svg",
     img: "../../../assets/images/faces/4.jpg",
     owner: "jason who",
-    email: "s.bond@datatables.net",
-    sharewith: "Internal (15), Personal (3)",
-    linktype: "Public",
-    modified: "4 minute ago",
-
-    age: "13 days ago",
+    email: "i.bond@datatables.net",
+    sharewith: "Internal ",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "5",
-    fileimg: "../../../assets/images/svgs/word.png",
     imglink: "../../../assets/images/svgs/bag.png",
     name: "Blog post outline",
     app: "../../../assets/images/svgs/crypto-currencies/gd.svg",
     img: "../../../assets/images/faces/5.jpg",
     owner: "Sam Smiley",
-    email: "a.bond@datatables.net",
-    sharewith: "Internal (15)",
-    linktype: "Company",
-    modified: "5 minute ago",
-
-    age: "6 hours ago",
+    email: "s.bond@datatables.net",
+    sharewith: "Personal",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "6",
-    fileimg: "../../../assets/images/svgs/crypto-currencies/file.svg",
     imglink: "../../../assets/images/svgs/crypto-currencies/lock.svg",
     name: "customer discovery notes",
     app: "../../../assets/images/svgs/crypto-currencies/microsoft.svg",
     img: "../../../assets/images/faces/6.jpg",
     owner: "Alex spencer",
     email: "a.bond@datatables.net",
-    sharewith: "Internal (15), Personal (3)",
-    linktype: "Restricted",
-    modified: "6 minute ago",
-
-    age: "2 hours ago",
+    sharewith: "Outside",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "7",
-    fileimg: "../../../assets/images/svgs/xl.png",
     imglink: "../../../assets/images/svgs/bag.png",
     name: "Sales",
     app: "../../../assets/images/svgs/crypto-currencies/gd.svg",
     img: "../../../assets/images/faces/7.jpg",
     owner: "Jane smith",
     email: "i.bond@datatables.net",
-    sharewith: "Internal (15)",
-    linktype: "Company",
-    modified: "7 minute ago",
-
-    age: "7 months ago",
+    sharewith: "Personal",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "8",
-    fileimg: "../../../assets/images/svgs/word.png",
     imglink: "../../../assets/images/svgs/glob.png",
     name: "Blog post outline",
     app: "../../../assets/images/svgs/crypto-currencies/gd.svg",
     img: "../../../assets/images/faces/8.jpg",
     owner: "Bruce williams",
-    email: "i.bond@datatables.net",
-    sharewith: "Internal (15), Personal (3)",
-    linktype: "Public",
-    modified: "8 minute ago",
-
-    age: "8 days ago",
+    email: "s.bond@datatables.net",
+    sharewith: "Internal ",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "9",
-    fileimg: "../../../assets/images/svgs/crypto-currencies/file.svg",
     imglink: "../../../assets/images/svgs/bag.png",
     name: "customer discovery notes",
     app: "../../../assets/images/svgs/crypto-currencies/microsoft.svg",
-    img: "../../../assets/images/faces/5.jpg",
+    img: "../../../assets/images/faces/4.jpg",
     owner: "Alex spencer",
-    email: "s.bond@datatables.net",
-    sharewith: "Internal (15)",
-    linktype: "Company",
-    modified: "9 minute ago",
-
-    age: "25 days ago",
+    email: "a.bond@datatables.net",
+    sharewith: "Personal",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "10",
-    fileimg: "../../../assets/images/svgs/word.png",
     imglink: "../../../assets/images/svgs/bag.png",
     name: "MSA draft",
     app: "../../../assets/images/svgs/crypto-currencies/microsoft.svg",
     img: "../../../assets/images/faces/10.jpg",
     owner: "Jane smith",
-    email: "s.bond@datatables.net",
-    sharewith: "Internal (15), Personal (3)",
-    linktype: "Company",
-    modified: "10 minute ago",
-    age: "3 years ago",
+    email: "a.bond@datatables.net",
+    sharewith: "Personal",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "11",
-    fileimg: "../../../assets/images/svgs/crypto-currencies/file.svg",
     imglink: "../../../assets/images/svgs/glob.png",
     name: "Blog post outline",
     app: "../../../assets/images/svgs/crypto-currencies/gd.svg",
     img: "../../../assets/images/faces/11.jpg",
     owner: "Sam Smiley",
     email: "s.bond@datatables.net",
-    sharewith: "Internal (15)",
-    linktype: "Public",
-    modified: "11 minute ago",
-    age: "1 years ago",
+    sharewith: "Internal ",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "12",
-    fileimg: "../../../assets/images/svgs/pdf.png",
     imglink: "../../../assets/images/svgs/crypto-currencies/lock.svg",
     name: "P & L Projections",
     app: "../../../assets/images/svgs/crypto-currencies/microsoft.svg",
     img: "../../../assets/images/faces/12.jpg",
     owner: "Alex spencer",
-    email: "s.bond@datatables.net",
-    sharewith: "Internal (15), Personal (3)",
-    linktype: "Restricted",
-    modified: "12 minute ago",
-    age: "5 days ago",
+    email: "a.bond@datatables.net",
+    sharewith: "Outside",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "13",
-    fileimg: "../../../assets/images/svgs/word.png",
     imglink: "../../../assets/images/svgs/crypto-currencies/lock.svg",
     name: "customer discovery notes",
     app: "../../../assets/images/svgs/crypto-currencies/gd.svg",
     img: "../../../assets/images/faces/3.jpg",
     owner: "Jane smith",
-    email: "s.bond@datatables.net",
-    sharewith: "Internal (15)",
-    linktype: "Restricted",
-    modified: "13 minute ago",
-    age: "2 months ago",
+    email: "i.bond@datatables.net",
+    sharewith: "Internal ",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
   {
     id: "14",
-    fileimg: "../../../assets/images/svgs/pdf.png",
     imglink: "../../../assets/images/svgs/glob.png",
     name: "Blog post outline",
     app: "../../../assets/images/svgs/crypto-currencies/microsoft.svg",
-    img: "../../../assets/images/faces/5.jpg",
+    img: "../../../assets/images/faces/2.jpg",
     owner: "Sam Smiley",
     email: "s.bond@datatables.net",
-    sharewith: "Internal (15), Personal (3)",
-    linktype: "Public",
-    modified: "14 minute ago",
-    age: "10 days ago",
+    sharewith: " Personal",
+    owned: "1,223 items",
+    total: "10,258 items",
+    sharing: "20,546 items",
   },
 ];
 
-export const DataTables = () => {
+export const UserDatable = () => {
   // const [selectedRows, setSelectedRows] = React.useState([]);
   // const [toggleCleared, setToggleCleared] = React.useState(false);
   // const [data, setData] = React.useState(tableDataItems);
@@ -268,26 +244,7 @@ export const DataTables = () => {
 
   const columns: any = [
     {
-      name: "NAME",
-      selector: (row: TableDataItem) => (
-        <div className="d-flex align-items-center gap-3 ">
-          <img src={`${row.fileimg} `} alt="" className=" avatar-xs " />{" "}
-          <p className="m-0">{row.name}</p>
-        </div>
-      ),
-      sortable: true,
-      grow: 1.2,
-    },
-    {
-      name: "App",
-      selector: (row: TableDataItem) => (
-        <img src={`${row.app}`} alt="" className="w-5% h-5%" />
-      ),
-      sortable: true,
-      grow: 0.05,
-    },
-    {
-      name: "Owner",
+      name: "People",
       selector: (row: TableDataItem) => (
         <div className="d-flex align-items-center gap-3 ">
           <img
@@ -299,47 +256,47 @@ export const DataTables = () => {
         </div>
       ),
       sortable: true,
-      grow: 0.8,
+      grow: 0.4,
     },
     {
       name: "Email",
       selector: (row: TableDataItem) => [row.email],
       sortable: true,
-      grow: 0.8,
+      grow: 0.4,
     },
     {
-      name: "Shared With",
-      selector: (row: TableDataItem) => [row.sharewith],
-      sortable: true,
-      grow: 0.8,
-    },
-    {
-      name: " Link Type",
+      name: "Apps",
       selector: (row: TableDataItem) => (
-        <div className="d-flex align-items-center gap-3 ">
-          <img
-            src={`${row.imglink} `}
-            alt=""
-            className=" rounded-circle  avatar avatar-xs "
-          />{" "}
-          <p className="m-0">{row.linktype}</p>
-        </div>
+        <img src={`${row.app}`} alt="" className="w-5% h-5%" />
       ),
       sortable: true,
-      grow: 0.6,
+      grow: 0.2,
     },
     {
-      name: "Modified",
-      selector: (row: TableDataItem) => [row.modified],
+      name: "User type",
+      selector: (row: TableDataItem) => <div>{row.sharewith}</div>,
       sortable: true,
-      grow: 0.5,
+      grow: 0.3,
     },
     {
-      name: "Age",
-      selector: (row: TableDataItem) => [row.age],
+      name: "Owned",
+      selector: (row: TableDataItem) => [row.owned],
       sortable: true,
-      grow: 0.5,
+      grow: 0.3,
     },
+    {
+      name: " Shared",
+      selector: (row: TableDataItem) => <div className="">{row.sharing}</div>,
+      sortable: true,
+      grow: 0.3,
+    },
+    {
+      name: "Total",
+      selector: (row: TableDataItem) => [row.total],
+      sortable: true,
+      grow: 0.3,
+    },
+
     {
       name: (
         <button className="btn-outline-none border border-light fs-14">
@@ -397,17 +354,32 @@ export const DataTables = () => {
   return (
     <>
       {/* <DataTableExtensions {...tableDatas}> */}
-      <DataTable
-        title
-        columns={columns}
-        data={data}
-        selectableRows
-        // contextActions={contextActions}
-        onSelectedRowsChange={handleRowSelected}
-        clearSelectedRows={toggleCleared}
-        onRowClicked={handleRowClick}
-        // pagination
-      />
+      <Row className="row-sm mt-5">
+        <Col lg={12}>
+          <Card className="custom-card">
+            <Card.Body>
+              <div>
+                <h6 className="main-content-label mb-1">All User</h6>
+                <p className="text-muted card-sub-title">118,780 people</p>
+              </div>
+
+              <div className="table-responsive ">
+                <DataTable
+                  title
+                  columns={columns}
+                  data={data}
+                  selectableRows
+                  // contextActions={contextActions}
+                  onSelectedRowsChange={handleRowSelected}
+                  clearSelectedRows={toggleCleared}
+                  onRowClicked={handleRowClick}
+                  // pagination
+                />
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
       {/* </DataTableExtensions> */}
       <Offcanvas
         placement="end"
@@ -424,7 +396,10 @@ export const DataTables = () => {
         >
           {selectedRowData && (
             <div className="d-flex align-items-center">
-              <img src={selectedRowData.fileimg} className="me-2 avatar-sm" />
+              <img
+                src={selectedRowData.img}
+                className="me-2 avatar avatar-sm"
+              />
               <h5
                 className="offcanvas-title decoration"
                 id="offcanvasRightLabel1"
@@ -440,100 +415,41 @@ export const DataTables = () => {
               <tbody>
                 <tr>
                   <th className="details " scope="row">
-                    App
+                    {" "}
+                    Email
                   </th>
+                  <td>
+                    <p className="m-0">{selectedRowData.email}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th className="details ">User type</th>
+                  <td>
+                    <div className="m-0">{selectedRowData.sharewith}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th className="details ">Apps</th>
                   <td>
                     <img src={selectedRowData.app} />
                   </td>
                 </tr>
                 <tr>
-                  <th className="details ">Owner</th>
-                  <td>
-                    <div className="d-flex align-items-center  gap-3">
-                      <img
-                        src={`${selectedRowData.img} `}
-                        alt=""
-                        className=" rounded-circle  avatar avatar-xs "
-                      />{" "}
-                      <div className="d-flex align-items-center gap-4">
-                        <p className="m-0 dot position-relative">
-                          {selectedRowData.owner}
-                        </p>
-                        <p className="m-0">{selectedRowData.email}</p>
-                      </div>
-                    </div>
-                  </td>
+                  <th className="details ">Owned</th>
+                  <td>{selectedRowData.owned}</td>
                 </tr>
                 <tr>
-                  <th className="details ">Identifier</th>
-                  <td>
-                    <div className="d-flex align-items-center gap-4 ">
-                      <p className=" m-0 dot position-relative">
-                        {selectedRowData.email}
-                      </p>
-                      <div className="d-flex gap-2 align-items-center">
-                        <img
-                          src="../../../assets/images/svgs/copy.png"
-                          className="avatar-xs"
-                        />
-                        <Link className="decoration text-black" href="">
-                          {" "}
-                          Copy id
-                        </Link>
-                      </div>
-                    </div>
-                  </td>
+                  <th className="details ">Shared </th>
+                  <td>{selectedRowData.sharing}</td>
                 </tr>
                 <tr>
-                  <th className="details ">Age</th>
-                  <td>{selectedRowData.age}</td>
-                </tr>
-                <tr>
-                  <th className="details ">Last modified </th>
-                  <td>{selectedRowData.modified}</td>
-                </tr>
-                <tr>
-                  <th className="details ">Share with</th>
-                  <td>{selectedRowData.sharewith}</td>
-                </tr>
-                <tr>
-                  <th className="details ">Direct link</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th className="details ">Link type</th>
-                  <td>
-                    <div className="d-flex align-items-center gap-3 ">
-                      <img
-                        src={`${selectedRowData.imglink} `}
-                        alt=""
-                        className="  avatar avatar-xs "
-                      />{" "}
-                      <p className="m-0">{selectedRowData.linktype}</p>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th className="details ">Share drive</th>
-                  <td>
-                    <div className="d-flex align-items-center gap-4 ">
-                      <p className=" m-0 dot position-relative">
-                        {selectedRowData.linktype}
-                      </p>
-                      <div className="d-flex gap-1 align-items-center">
-                        <img src="../../../assets/images/svgs/link.png" />
-                        <Link className="decoration text-black" href="">
-                          {" "}
-                          Copy link
-                        </Link>
-                      </div>
-                    </div>
-                  </td>
+                  <th className="details ">Total</th>
+                  <td>{selectedRowData.total}</td>
                 </tr>
               </tbody>
             </table>
           )}
-          <div className="d-flex gap-3 mt-4 ">
+          <div className="d-flex mt-4 gap-3 ">
             <div className="w-50">
               <Card className=" custom-card shadow-lg">
                 <Card.Body>
@@ -541,7 +457,6 @@ export const DataTables = () => {
                     <div className="row align-items-center justify-content-center">
                       <div className="col-auto user-lock">
                         <span className="img-fluid rounded-circle">
-                         
                           { selectedRowData && <img
                             className="img-fluid rounded-circle"
                             src={`${selectedRowData.img}`}
